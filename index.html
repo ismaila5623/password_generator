@@ -23,6 +23,30 @@
                     <img class="copy-icon" src="./assets/images/copy_icon.png" alt="">
                     <span class="password-display">--password--</span>
                 </div>
+                <div class="option-tools">
+                    <h4 class="subtitle">Customize password by:</h4>
+                    <ul class="list">
+                        <li class="list-item option-tools--item">
+                            <label for="max-length" class="list-item--desc">Password length:</label>
+                            <input class="input" id="max-length" value="15" type="number" min="10" max="50">
+                        </li>
+                        <li class="list-item option-tools--item">
+                            <label for="num" class="list-item--desc">Numbers only:</label>
+                            <input class="input" id="num" checked type="checkbox">
+                        </li>
+                        <li class="list-item option-tools--item">
+                            <label for="letter" class="list-item--desc">Letters only:</label>
+                            <input class="input" id="letter" checked type="checkbox">
+                        </li>
+                        <li class="list-item option-tools--item">
+                            <label for="symbol" class="list-item--desc">Symbols only:</label>
+                            <input class="input" id="symbol" type="checkbox">
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-container">
+                    <button class="btn-default btn">default</button>
+                </div>
                 <div class="btn-container">
                     <button class="btn-main btn">generate</button>
                 </div>

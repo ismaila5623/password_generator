@@ -9,6 +9,7 @@ body{
 .container{
     width:100vw;
     height:100vh;
+    min-height: 100vh;
     outline:1px solid white;
 }
 .wrapper{
@@ -69,8 +70,8 @@ body{
     background-color: lightgray;
     box-shadow: 0 0 20px black inset, 0 0 20px black;
     width:520px;
-    height:40%;
-    min-height: 350px;
+    height:70%;
+    min-height: 600px;
     border-radius: 15px;
     margin: 0 auto;
     display: flex;
@@ -127,6 +128,7 @@ body{
     width:100%;
     height:100%;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 .copy-icon{
     width:20px;
@@ -155,7 +157,101 @@ body{
     background-color: black;
     cursor: pointer;
 }
+.btn-default{
+    font-size: 1rem;
+    color:white;
+    background-color: gray;
+}
+.btn-default:hover{
+    color:gray;
+    background-color: white;
+}
 .btn-main:hover{
     background-color: lightgray;
     color:black;
+}
+.option-tools{
+    width:100%;
+    padding:0 3.5em;
+}
+.list{
+
+}
+.option-tools--item{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:.5em;
+}
+.option-tools--item:hover{
+    box-shadow: 0 0 20px white inset;
+}
+.list-item--desc{
+    flex:1;
+    position: relative;
+}
+.input{
+    width:65px;
+    height:fit-content;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding:.1em .5em;
+    display:inline-block;
+}
+.input:focus{
+    outline:none;
+    border:none;
+}
+.input[type="checkbox"]{
+    transform: translateX(20px);
+    height:25px;
+}
+.list-item--desc::before, .list-item--desc::after{
+    content:'';
+    height:2px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.list-item--desc::before{
+    background-color: white;
+    width:46%;
+    left:50%;
+}
+.list-item--desc::after{
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-left-color: white;
+    right:0;
+    bottom:-3px;
+}
+@media(max-width:570px){
+    .list-item--desc::before{
+        width:41%;
+        left:53%;
+    }
+}
+@media(max-width:526px){
+    .list-item--desc::before{
+        width:35%;
+        left:58%;
+    }
+}
+@media(max-width:500px){
+    .list-item--desc::before{
+        width:35%;
+        left:60%;
+    }
+}
+@media(max-width:488px){
+    .list-item--desc::before{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    .list-item--desc::after{
+        display: none;
+    }
 }
